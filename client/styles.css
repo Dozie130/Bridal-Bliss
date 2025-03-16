@@ -1,39 +1,80 @@
-.cart, .dress-details {
-    max-width: 1200px;
-    margin: 4rem auto;
-    padding: 0 2rem;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f5f6;
 }
-
-.cart-item {
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffecf2;
+}
+h1 {
+    color: #ff69b4;
+    font-size: 2.5em;
+    margin: 0;
+}
+h2 {
+    color: #ff69b4;
+    font-size: 1.5em;
+    margin: 0;
+}
+.hero {
     display: flex;
-    justify-content: space-between;
-    margin: 1rem 0;
-    padding: 1rem;
-    background: white;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #fff;
+}
+.hero-content {
+    background-color: #e8ecef;
+    padding: 20px;
     border-radius: 10px;
+    text-align: center;
+    max-width: 300px;
 }
-
-.modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
+.hero-content h3 {
+    color: #333;
+    font-size: 1.8em;
+    margin: 0 0 10px;
 }
-
-.modal-content {
-    background: white;
-    margin: 15% auto;
-    padding: 2rem;
-    width: 70%;
-    max-width: 500px;
-    border-radius: 10px;
+.hero-content p {
+    color: #666;
+    margin: 0 0 20px;
 }
-
-.close {
-    float: right;
-    font-size: 1.5rem;
+.hero-content button {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 1em;
+}
+.hero-content button:hover {
+    background-color: #ff4d99;
+}
+.dress-list {
+    padding: 20px;
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.dress-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 15px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.dress-card h4 {
+    margin: 0 0 10px;
+    color: #333;
+}
+.dress-card p {
+    margin: 0 0 10px;
+    color: #666;
 }
