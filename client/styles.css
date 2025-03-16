@@ -233,18 +233,17 @@ nav {
 .nav-links a:hover {
     color: #a3154a;
 }
-
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1562342899-589e7e0c5c30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1513002749550-c59d786b4e2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+    background-color: #fff0e6; /* Brighter peach fallback */
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: white;
 }
+
 
 .hero-content h1 {
     font-size: 3.5em;
