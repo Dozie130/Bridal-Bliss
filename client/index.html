@@ -3,26 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bridal Bliss - Wedding Dress Boutique</title>
+    <title>Bridal Bliss - Luxury Wedding Dress Boutique</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Bridal Bliss</h1>
-        <h2>Wedding Dress Boutique</h2>
+        <nav>
+            <div class="logo">Bridal Bliss</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#dresses">Dresses</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <section class="hero">
-            <div class="hero-content">
-                <h3>Elegant Wedding Dresses</h3>
-                <p>Rent or Buy Your Dream Dress Today</p>
-                <button onclick="showDresses()">Shop Now</button>
-            </div>
-        </section>
-        <section id="dress-list" class="dress-list">
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Bridal Bliss</h1>
+            <h2>Luxury Wedding Dress Boutique</h2>
+            <p>Discover your perfect wedding dress—rent or buy the elegance you deserve.</p>
+            <button onclick="showDresses()">Shop Now</button>
+        </div>
+    </section>
+
+    <section id="dresses" class="dress-gallery">
+        <h2>Our Exquisite Collection</h2>
+        <div id="dress-list" class="dress-grid">
             <!-- Dresses will be added here by JavaScript -->
-        </section>
-    </main>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@bridalbliss.com | Phone: +1-800-BRIDE-55</p>
+        <p>Follow us on <a href="#">Instagram</a> | <a href="#">Facebook</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Bridal Bliss. All Rights Reserved.</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
