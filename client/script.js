@@ -20,7 +20,28 @@ function showDresses() {
         { name: "Vintage Charm", price: "$450", description: "A vintage-inspired dress with pearl details.", image: "https://via.placeholder.com/250x300.png?text=Vintage+Charm" }
     ];
 
-    // Add dresses to the page
+  // Handle form submission
+document.getElementById("quote-form").addEventListener("submit", async function(event) {
+    event.preventDefault();
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    try {
+        const response = await fetch("/.netlify/functions/submit-form", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ name, email, message }),
+        });
+        const result = await response.json();
+        alert(result.message);
+        this.reset();
+    } catch (error) {
+        alert("There was an error submitting your form. Please try again.");
+    }
+});  // Add dresses to the page
     dresses.forEach(dress => {
         const dressCard = document.createElement("div");
         dressCard.className = "dress-card";
