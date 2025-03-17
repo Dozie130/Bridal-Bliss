@@ -1,187 +1,4 @@
-hi* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f1f0;
-    color: #333;
-    line-height: 1.6;
-}
-
-header {
-    background-color: #fff;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-nav {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-}
-
-.logo {
-    font-family: 'Cinzel Decorative', cursive;
-    font-size: 1.8em;
-    color: #d81b60;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #d81b60;
-    font-weight: 500;
-}
-
-.nav-links a:hover {
-    color: #a3154a;
-}
-
-.hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1562342899-589e7e0c5c30?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-    background-color: #ffe6f0; /* Fallback color if image doesn't load */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
-.hero-content h1 {
-    font-size: 3.5em;
-    margin-bottom: 10px;
-    font-family: 'Cinzel Decorative', cursive;
-}
-
-.hero-content h2 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-.hero-content button {
-    background-color: #d81b60;
-    color: white;
-    border: none;
-    padding: 12px 30px;
-    font-size: 1.1em;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.hero-content button:hover {
-    background-color: #a3154a;
-}
-
-.dress-gallery {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.dress-gallery h2 {
-    font-size: 2.5em;
-    margin-bottom: 40px;
-    color: #d81b60;
-}
-
-.dress-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.dress-card {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
-}
-
-.dress-card:hover {
-    transform: translateY(-5px);
-}
-
-.dress-card img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.dress-card-content {
-    padding: 20px;
-    text-align: center;
-}
-
-.dress-card-content h3 {
-    font-size: 1.5em;
-    color: #d81b60;
-    margin-bottom: 10px;
-}
-
-.dress-card-content p {
-    color: #666;
-    margin-bottom: 15px;
-}
-
-.dress-card-content .price {
-    font-weight: bold;
-    color: #d81b60;
-}
-
-.contact {
-    padding: 50px 20px;
-    background-color: #f5f1f0;
-    text-align: center;
-}
-
-.contact h2 {
-    font-size: 2em;
-    color: #d81b60;
-    margin-bottom: 20px;
-}
-
-.contact p {
-    font-size: 1.1em;
-    margin-bottom: 10px;
-}
-
-.contact a {
-    color: #d81b60;
-    text-decoration: none;
-}
-
-.contact a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    background-color: #d81b60;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-}
+/* Reset default styles for consistency */
 * {
     margin: 0;
     padding: 0;
@@ -190,11 +7,11 @@ footer {
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f5f1f0;
     color: #333;
     line-height: 1.6;
 }
 
+/* Header and Navigation */
 header {
     background-color: #fff;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -204,23 +21,31 @@ header {
 }
 
 nav {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo {
     font-family: 'Cinzel Decorative', cursive;
-    font-size: 1.8em;
+    font-size: 1.5em;
     color: #d81b60;
 }
 
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    color: #d81b60;
+    cursor: pointer;
+    padding: 10px;
+}
+
 .nav-links {
-    list-style: none;
     display: flex;
+    list-style: none;
     gap: 20px;
 }
 
@@ -228,11 +53,14 @@ nav {
     text-decoration: none;
     color: #d81b60;
     font-weight: 500;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #a3154a;
 }
+
+/* Hero Section */
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://images.unsplash.com/photo-1513002749550-c59d786b4e2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
@@ -244,11 +72,10 @@ nav {
     color: white;
 }
 
-
 .hero-content h1 {
-    font-size: 3.5em;
-    margin-bottom: 10px;
     font-family: 'Cinzel Decorative', cursive;
+    font-size: 4em;
+    margin-bottom: 10px;
 }
 
 .hero-content h2 {
@@ -265,26 +92,29 @@ nav {
     background-color: #d81b60;
     color: white;
     border: none;
-    padding: 12px 30px;
+    padding: 15px 30px;
     font-size: 1.1em;
-    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .hero-content button:hover {
     background-color: #a3154a;
 }
 
+/* Dress Gallery */
 .dress-gallery {
     padding: 50px 20px;
     text-align: center;
+    background-color: #f9f9f9;
 }
 
 .dress-gallery h2 {
+    font-family: 'Cinzel Decorative', cursive;
     font-size: 2.5em;
-    margin-bottom: 40px;
     color: #d81b60;
+    margin-bottom: 40px;
 }
 
 .dress-grid {
@@ -299,8 +129,8 @@ nav {
     background-color: white;
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .dress-card:hover {
@@ -309,16 +139,16 @@ nav {
 
 .dress-card img {
     width: 100%;
-    height: 300px;
+    height: 200px;
     object-fit: cover;
 }
 
 .dress-card-content {
     padding: 20px;
-    text-align: center;
 }
 
 .dress-card-content h3 {
+    font-family: 'Cinzel Decorative', cursive;
     font-size: 1.5em;
     color: #d81b60;
     margin-bottom: 10px;
@@ -326,7 +156,7 @@ nav {
 
 .dress-card-content p {
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .dress-card-content .price {
@@ -342,46 +172,84 @@ nav {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .dress-card-content .like-btn.liked {
-    background-color: #d81b60;
+    background-color: #28a745; /* Green when liked */
     color: white;
 }
 
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+    background-color: white;
+    text-align: center;
+}
+
+.testimonials h2 {
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 2.5em;
+    color: #d81b60;
+    margin-bottom: 40px;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    background-color: #f5f1f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-card p {
+    font-style: italic;
+    color: #666;
+}
+
+.testimonial-card h4 {
+    margin-top: 10px;
+    color: #d81b60;
+}
+
+/* Contact Section */
 .contact {
     padding: 50px 20px;
-    background-color: #f5f1f0;
+    background-color: #f9f9f9;
     text-align: center;
 }
 
 .contact h2 {
-    font-size: 2em;
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 2.5em;
     color: #d81b60;
     margin-bottom: 20px;
 }
 
 .contact p {
-    font-size: 1.1em;
     margin-bottom: 10px;
 }
 
 .contact a {
     color: #d81b60;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .contact a:hover {
-    text-decoration: underline;
+    color: #a3154a;
 }
 
 .contact-form {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form h3 {
@@ -390,95 +258,87 @@ nav {
     margin-bottom: 20px;
 }
 
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
     padding: 10px;
-    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 1em;
+    width: 100%;
 }
 
 .contact-form textarea {
-    height: 100px;
-    resize: none;
+    resize: vertical;
+    min-height: 100px;
 }
 
 .contact-form button {
     background-color: #d81b60;
     color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 10px;
+    font-size: 1.1em;
     cursor: pointer;
-    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
     background-color: #a3154a;
 }
 
+/* Footer */
 footer {
-    background-color: #d81b60;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-}
-
-
-
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5em;
-    }
-    .hero-content h2 {
-        font-size: 1.5em;
-    }
-    .nav-links {
-        display: none; /* Hide nav on small screens for now */
-    }
-}
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2.5em;
-    }
-    .hero-content h2 {
-        font-size: 1.5em;
-    }
-    .nav-links {
-        display: none; /* Hide nav on small screens for now */
-    }
-}
-.testimonials {
-    padding: 50px 20px;
-    background-color: white;
-    text-align: center;
-}
-.testimonials h2 {
-    font-size: 2em;
-    color: #d81b60;
-    margin-bottom: 40px;
-}
-.testimonial-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-.testimonial-card {
     background-color: #f5f1f0;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-.testimonial-card p {
-    font-style: italic;
+    text-align: center;
+    font-size: 0.9em;
     color: #666;
 }
-.testimonial-card h4 {
-    margin-top: 10px;
-    color: #d81b60;
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links li {
+        list-style: none;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5em;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5em;
+    }
+
+    .hero-content p {
+        font-size: 1em;
+    }
+
+    .dress-gallery h2,
+    .testimonials h2,
+    .contact h2 {
+        font-size: 2em;
+    }
 }
